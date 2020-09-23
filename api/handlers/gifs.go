@@ -4,6 +4,7 @@ import (
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gofiber/fiber/v2"
 	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
 // Gif struct
@@ -62,4 +63,31 @@ func GetAllGifs(c *fiber.Ctx) error {
 	}
 	// return employees list in JSON format
 	return c.JSON(&gifsArr)
+}
+
+func DeleteGif(c *fiber.Ctx) error {
+	// connection to the mongodb server
+	initDB()
+	// defining the database and the collection
+	collection := mg.Db.Collection("gifs")
+	// gets the record id
+	gifID, err := primitive.ObjectIDFromHex(
+		c.Params("id"),
+	)
+	// the provided ID might be invalid ObjectID
+	if err != nil {
+		return c.Status(500).SendString(err.Error())
+	}
+	// find and delete the employee with the given ID
+	query := bson.D{{Key: "_id", Value: gifID}}
+	result, err := collection.DeleteOne(c.Context(), &query)
+	if err != nil {
+		return c.Status(500).SendString(err.Error())
+	}
+	// the employee might not exist
+	if result.DeletedCount < 1 {
+		return c.Status(500).SendString(err.Error())
+	}
+	// the record was deleted
+	return c.Status(201).SendString("The record was deleted with success.")
 }
