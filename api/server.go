@@ -19,7 +19,7 @@ func main() {
 	app.Use(cors.New())
 	app.Use(limiter.New())
 	app.Use(compress.New())
-	router.SetupRoutes(app)
 	app.Use(logger.New())
+	router.SetupRoutes(app)
 	app.Listen(":4000")
 }
