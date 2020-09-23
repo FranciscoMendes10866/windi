@@ -91,3 +91,32 @@ func DeleteGif(c *fiber.Ctx) error {
 	// the record was deleted
 	return c.Status(201).SendString("The record was deleted with success.")
 }
+
+func GetUserGifs(c *fiber.Ctx) error {
+	// connection to the mongodb server
+	initDB()
+	// defining the database and the collection
+	collection := mg.Db.Collection("gifs")
+	// New Gif struct
+	gifs := new(GifData)
+	// Parse body into struct
+	c.BodyParser(gifs)
+	// token payload
+	user := c.Locals("user").(*jwt.Token)
+	claims := user.Claims.(jwt.MapClaims)
+	tokenID := claims["id"].(string)
+	// get all records
+	query := bson.D{{Key: "user_id", Value: tokenID}}
+	data, err := collection.Find(c.Context(), query)
+	if err != nil {
+		return c.Status(500).SendString(err.Error())
+	}
+	var gifsArr []GifData = make([]GifData, 0)
+	// iterate the data and decode each item into an Employee
+	if err := data.All(c.Context(), &gifsArr); err != nil {
+		return c.Status(500).SendString(err.Error())
+
+	}
+	// return employees list in JSON format
+	return c.JSON(&gifsArr)
+}

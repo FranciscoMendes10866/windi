@@ -14,5 +14,6 @@ func SetupRoutes(app *fiber.App) {
 	gifs := api.Group("/gifs")
 	gifs.Post("/", guards.Protected(), handlers.CreateGif)
 	gifs.Delete("/:id", guards.Protected(), handlers.DeleteGif)
+	gifs.Get("/user", guards.Protected(), handlers.GetUserGifs)
 	gifs.Get("/", handlers.GetAllGifs)
 }
