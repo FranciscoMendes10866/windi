@@ -2,6 +2,7 @@ package router
 
 import (
 	"github.com/gofiber/fiber/v2"
+	"github.com/windi-api/guards"
 	"github.com/windi-api/handlers"
 )
 
@@ -10,4 +11,6 @@ func SetupRoutes(app *fiber.App) {
 	auth := api.Group("/auth")
 	auth.Post("/signup", handlers.CreateUser)
 	auth.Post("/signin", handlers.LoginUser)
+	gifs := api.Group("/gifs")
+	gifs.Post("/", guards.Protected(), handlers.CreateGif)
 }

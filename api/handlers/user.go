@@ -1,22 +1,11 @@
 package handlers
 
 import (
-	"context"
-	"time"
-
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gofiber/fiber/v2"
 	"go.mongodb.org/mongo-driver/bson"
-	"go.mongodb.org/mongo-driver/mongo"
-	"go.mongodb.org/mongo-driver/mongo/options"
 	"golang.org/x/crypto/bcrypt"
 )
-
-// MongoInstance contains the Mongo client and database objects
-type MongoInstance struct {
-	Client *mongo.Client
-	Db     *mongo.Database
-}
 
 // User struct
 type UserData struct {
@@ -24,29 +13,6 @@ type UserData struct {
 	Username string `json:"username" bson:"username"`
 	Email    string `json:"email" bson:"email"`
 	Password string `json:"password" bson:"password"`
-}
-
-var mg MongoInstance
-
-func initDB() error {
-	client, err := mongo.NewClient(options.Client().ApplyURI("mongodb://root:root@localhost:27017/"))
-
-	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
-	defer cancel()
-
-	err = client.Connect(ctx)
-	db := client.Database("windidb")
-
-	if err != nil {
-		return err
-	}
-
-	mg = MongoInstance{
-		Client: client,
-		Db:     db,
-	}
-
-	return nil
 }
 
 func CreateUser(c *fiber.Ctx) error {
