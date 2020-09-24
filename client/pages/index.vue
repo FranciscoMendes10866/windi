@@ -1,31 +1,24 @@
 <template>
   <div>
     <Navbar />
-
     <Hero>
       <Container>
         <Row>
           <Column>
-            <Header1>This is the Header</Header1>
+            <Header4>Latest</Header4>
             <Paragraph
-              >There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration in some form, by
-              injected humour, or randomised words which don't look even
-              slightly believable.</Paragraph
+              >Here you will find the gifs that were most recently added to the
+              platform.</Paragraph
             >
-            <Button>Get Started!</Button>
           </Column>
-          <Column>
-            <Header1>This is the Header</Header1>
-            <Paragraph
-              >There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration in some form, by
-              injected humour, or randomised words which don't look even
-              slightly believable.</Paragraph
-            >
-            <Button>Get Started!</Button></Column
-          >
         </Row>
+        <CardRow>
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </CardRow>
       </Container>
     </Hero>
   </div>
@@ -35,12 +28,13 @@
 import Vue from 'vue'
 import {
   Container,
-  Button,
-  Header1,
+  Header4,
   Paragraph,
   Hero,
   Column,
   Row,
+  CardRow,
+  Card,
 } from '../assets/main.styles'
 import Navbar from '../components/Navbar.vue'
 
@@ -48,12 +42,13 @@ export default Vue.extend({
   components: {
     Navbar,
     Container,
-    Button,
-    Header1,
+    Header4,
     Paragraph,
     Hero,
     Column,
     Row,
+    CardRow,
+    Card,
   },
 })
 </script>

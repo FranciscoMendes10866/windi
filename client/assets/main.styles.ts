@@ -25,6 +25,10 @@ const Container = styled.div`
 
 const Row = styled.div`
   display: flex;
+`
+
+const CardRow = styled.div`
+  display: flex;
   flex-wrap: wrap;
 `
 
@@ -68,7 +72,7 @@ const Header3 = styled.h3`
 `
 
 const Header4 = styled.h4`
-  color: #94a1b2;
+  color: #fffffe;
   margin: 2.75rem 0 1.05rem;
   font-family: 'Work Sans', sans-serif;
   font-weight: 400;
@@ -104,6 +108,15 @@ const Button = styled.button`
   border-radius: 4px;
 `
 
+const Card = styled.div`
+  min-width: 250px;
+  height: 400px;
+  width: 320px;
+  background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+  margin-top: 10px;
+  margin-left: 10px;
+`
+
 export {
   Wrapper,
   Container,
@@ -117,4 +130,6 @@ export {
   Header3,
   Header4,
   Header5,
+  CardRow,
+  Card,
 }
