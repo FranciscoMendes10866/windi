@@ -1,8 +1,8 @@
 import styled from 'vue-styled-components'
 
 const Wrapper = styled.html`
-  @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&display=swap');
-  font-family: 'Work Sans', sans-serif;
+  @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap');
+  font-family: 'Anonymous Pro', monospace;
   font-weight: 400;
   line-height: 1.65;
   -ms-text-size-adjust: 100%;
@@ -46,7 +46,7 @@ const Hero = styled.section`
 const Header1 = styled.h1`
   color: #fffffe;
   margin: 2.75rem 0 1.05rem;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Anonymous Pro', monospace;
   font-weight: 400;
   line-height: 1.15;
   margin-top: 0;
@@ -56,7 +56,7 @@ const Header1 = styled.h1`
 const Header2 = styled.h2`
   color: #fffffe;
   margin: 2.75rem 0 1.05rem;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Anonymous Pro', monospace;
   font-weight: 400;
   line-height: 1.15;
   font-size: 2.441em;
@@ -65,7 +65,7 @@ const Header2 = styled.h2`
 const Header3 = styled.h3`
   color: #fffffe;
   margin: 2.75rem 0 1.05rem;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Anonymous Pro', monospace;
   font-weight: 400;
   line-height: 1.15;
   font-size: 1.953em;
@@ -74,7 +74,7 @@ const Header3 = styled.h3`
 const Header4 = styled.h4`
   color: #fffffe;
   margin: 2.75rem 0 1.05rem;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Anonymous Pro', monospace;
   font-weight: 400;
   line-height: 1.15;
   font-size: 1.563em;
@@ -83,7 +83,7 @@ const Header4 = styled.h4`
 const Header5 = styled.h5`
   color: #fffffe;
   margin: 2.75rem 0 1.05rem;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Anonymous Pro', monospace;
   font-weight: 400;
   line-height: 1.15;
   font-size: 1.25em;
@@ -95,26 +95,43 @@ const Paragraph = styled.p`
 `
 
 const Button = styled.button`
-  background: #7f5af0;
+  background: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 20px;
   padding-bottom: 20px;
   color: #fffffe;
   border: none;
-  shadow: none;
+  outline: none;
   font-size: 24px;
   font-weight: bold;
-  border-radius: 4px;
 `
 
 const Card = styled.div`
   min-width: 250px;
   height: 400px;
   width: 320px;
-  background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
   margin-top: 10px;
   margin-left: 10px;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    opacity: 0.6;
+  }
+`
+
+const Img = styled.img`
+  max-width: 100%;
+  max-height: 100%;
+  height: 100%;
+  width: 100%;
+  filter: grayscale(1);
 `
 
 export {
@@ -132,4 +149,5 @@ export {
   Header5,
   CardRow,
   Card,
+  Img,
 }
