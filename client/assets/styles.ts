@@ -1,28 +1,92 @@
 import styled from 'vue-styled-components'
 
 const Wrapper = styled.body`
+  @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&display=swap');
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.65;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  padding: 0px !important;
+  margin: 0px !important;
+`
+
+const Container = styled.div`
+  max-width: 950px;
   margin-right: auto;
   margin-left: auto;
-  max-width: 960px;
   padding-right: 10px;
   padding-left: 10px;
 `
 
-const Container = styled.div`
+const Row = styled.div`
   display: flex;
-  max-width: 960px;
+`
+
+const Column = styled.div`
+  flex-grow: 1;
 `
 
 const Hero = styled.section`
   background: #16161a;
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  padding-top: 50px;
+  padding-bottom: 50px;
 `
 
-const Headline = styled.h1`
+const Header1 = styled.h1`
   color: #fffffe;
+  margin: 2.75rem 0 1.05rem;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.15;
+  margin-top: 0;
+  font-size: 3.052em;
+`
+
+const Header2 = styled.h2`
+  color: #fffffe;
+  margin: 2.75rem 0 1.05rem;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.15;
+  font-size: 2.441em;
+`
+
+const Header3 = styled.h3`
+  color: #fffffe;
+  margin: 2.75rem 0 1.05rem;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.15;
+  font-size: 1.953em;
+`
+
+const Header4 = styled.h4`
+  color: #fffffe;
+  margin: 2.75rem 0 1.05rem;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.15;
+  font-size: 1.563em;
+`
+
+const Header5 = styled.h5`
+  color: #fffffe;
+  margin: 2.75rem 0 1.05rem;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.15;
+  font-size: 1.25em;
 `
 
 const Paragraph = styled.p`
   color: #94a1b2;
+  margin-bottom: 1.15rem;
 `
 
 const Button = styled.button`
@@ -39,4 +103,17 @@ const Button = styled.button`
   border-radius: 4px;
 `
 
-export { Wrapper, Container, Hero, Headline, Paragraph, Button }
+export {
+  Wrapper,
+  Container,
+  Row,
+  Column,
+  Hero,
+  Paragraph,
+  Button,
+  Header1,
+  Header2,
+  Header3,
+  Header4,
+  Header5,
+}
