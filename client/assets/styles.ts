@@ -9,8 +9,10 @@ const Wrapper = styled.body`
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  padding: 0px !important;
-  margin: 0px !important;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
 `
 
 const Container = styled.div`
@@ -31,9 +33,6 @@ const Column = styled.div`
 
 const Hero = styled.section`
   background: #16161a;
-  height: 100%;
-  width: 100%;
-  display: inline-block;
   padding-top: 50px;
   padding-bottom: 50px;
 `
