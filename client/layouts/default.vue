@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { Wrapper } from '../assets/styles'
+import { Wrapper } from '../assets/main.styles'
 
 export default Vue.extend({
   components: {

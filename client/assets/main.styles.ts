@@ -1,6 +1,6 @@
 import styled from 'vue-styled-components'
 
-const Wrapper = styled.body`
+const Wrapper = styled.html`
   @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&display=swap');
   font-family: 'Work Sans', sans-serif;
   font-weight: 400;
@@ -16,7 +16,7 @@ const Wrapper = styled.body`
 `
 
 const Container = styled.div`
-  max-width: 950px;
+  max-width: 1000px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 10px;
@@ -25,10 +25,12 @@ const Container = styled.div`
 
 const Row = styled.div`
   display: flex;
+  flex-wrap: wrap;
 `
 
 const Column = styled.div`
   flex-grow: 1;
+  flex-basis: 500px;
 `
 
 const Hero = styled.section`
@@ -66,7 +68,7 @@ const Header3 = styled.h3`
 `
 
 const Header4 = styled.h4`
-  color: #fffffe;
+  color: #94a1b2;
   margin: 2.75rem 0 1.05rem;
   font-family: 'Work Sans', sans-serif;
   font-weight: 400;
