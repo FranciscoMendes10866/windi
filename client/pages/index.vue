@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <Wrapper>
     <div>
       <Logo />
       <h1 class="title">client</h1>
@@ -20,15 +20,22 @@
         >
           GitHub
         </a>
+        <Button>Hello Button</Button>
       </div>
     </div>
-  </div>
+  </Wrapper>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import { Wrapper, Button } from '../assets/styles'
 
-export default Vue.extend({})
+export default Vue.extend({
+  components: {
+    Wrapper,
+    Button,
+  },
+})
 </script>
 
 <style>
