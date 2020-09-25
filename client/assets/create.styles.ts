@@ -1,6 +1,8 @@
 import styled from 'vue-styled-components'
 
 const Input = styled.input`
+  margin-bottom: 40px;
+  margin-top: 20px;
   font-family: 'Anonymous Pro', monospace;
   outline: none;
   font-size: 1.25em;

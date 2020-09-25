@@ -5,7 +5,7 @@
       <Container>
         <Row>
           <Column>
-            <Header4>Register</Header4>
+            <Header4>Create a New Account.</Header4>
             <Input
               v-model="localEmail"
               type="email"

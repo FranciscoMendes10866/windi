@@ -5,7 +5,7 @@
       <Container>
         <Row>
           <Column>
-            <Header4>Login</Header4>
+            <Header4>Log into an existing account.</Header4>
             <Input
               v-model="localEmail"
               type="email"

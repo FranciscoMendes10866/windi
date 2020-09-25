@@ -5,7 +5,7 @@
       <Container>
         <Row>
           <Column>
-            <Header4>Add Gif.</Header4>
+            <Header4>Add a new GIF.</Header4>
             <Input
               v-model="localURL"
               type="url"
