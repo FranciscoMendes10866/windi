@@ -9844,6 +9844,14 @@ vue@^2.6.12:
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.12.tgz#f5ebd4fa6bd2869403e29a896aed4904456c9123"
   integrity sha512-uhmLFETqPPNyuLLbsKz6ioJ4q7AZHzD8ZVFNATNyICSZouqP2Sz0rotWQC8UNBF6VGSCs5abnKJoStA6JbCbfg==
 
+vuex-persist@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/vuex-persist/-/vuex-persist-3.1.0.tgz#71433b14dcca80744dc876dcd8f7666bdca8ecd7"
+  integrity sha512-Qhq2Mmk++RLmqKmiyFr574RmDyjYKDM4AniulD8MCA8j1iX+ZvaAQxrr6s/fAw6ttTup6kHEW1mKFb9l+9zguQ==
+  dependencies:
+    deepmerge "^4.2.2"
+    flatted "^2.0.0"
+
 vuex@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/vuex/-/vuex-3.5.1.tgz#f1b8dcea649bc25254cf4f4358081dbf5da18b3d"
