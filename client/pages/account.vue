@@ -15,6 +15,7 @@
         <CardRow>
           <Card v-for="Gif in Gifs" :key="Gif.id">
             <Img :src="Gif.url" alt />
+            <DeleteButton @click="Selected(Gif)">Delete</DeleteButton>
           </Card>
         </CardRow>
       </Container>
@@ -35,6 +36,7 @@ import {
   Card,
   Img,
 } from '../assets/main.styles'
+import { DeleteButton } from '../assets/account.styles'
 import Navbar from '../components/Navbar.vue'
 
 export default Vue.extend({
@@ -49,6 +51,7 @@ export default Vue.extend({
     CardRow,
     Card,
     Img,
+    DeleteButton,
   },
   data: () => ({
     Gifs: [],
@@ -69,6 +72,17 @@ export default Vue.extend({
           // eslint-disable-next-line no-console
           this.Gifs = res.data
         })
+        // eslint-disable-next-line no-console
+        .catch((error: Error) => console.log(error))
+    },
+    Selected(Gif) {
+      this.$axios
+        .delete(`http://localhost:4000/api/v1/gifs/${Gif.id}`, {
+          headers: {
+            Authorization: `Bearer ${this.$store.state.Token}`,
+          },
+        })
+        .then(() => this.Fetch())
         // eslint-disable-next-line no-console
         .catch((error: Error) => console.log(error))
     },
