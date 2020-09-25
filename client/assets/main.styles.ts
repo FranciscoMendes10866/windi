@@ -111,7 +111,7 @@ const Card = styled.div`
   min-width: 250px;
   height: 400px;
   width: 320px;
-  margin-top: 10px;
+  margin-top: 50px;
   margin-left: 10px;
   position: relative;
   &::after {

@@ -15,6 +15,9 @@
         <CardRow>
           <Card v-for="Gif in Gifs" :key="Gif.id">
             <Img :src="Gif.url" alt />
+            <CopyButton @click="Selected(Gif)"
+              >Copy to Clipboard</CopyButton
+            >
           </Card>
         </CardRow>
       </Container>
@@ -35,6 +38,7 @@ import {
   Card,
   Img,
 } from '../assets/main.styles'
+import { CopyButton } from '../assets/account.styles'
 import Navbar from '../components/Navbar.vue'
 
 export default Vue.extend({
@@ -49,6 +53,7 @@ export default Vue.extend({
     CardRow,
     Card,
     Img,
+    CopyButton,
   },
   data: () => ({
     Gifs: [],
@@ -67,6 +72,20 @@ export default Vue.extend({
         })
         // eslint-disable-next-line no-console
         .catch((error: Error) => console.log(error))
+    },
+    Selected(Gif) {
+      this.$copyText(Gif.url).then(
+        (e) => {
+          alert('Copied')
+          // eslint-disable-next-line no-console
+          console.log(e)
+        },
+        (e) => {
+          alert('Can not copy')
+          // eslint-disable-next-line no-console
+          console.log(e)
+        }
+      )
     },
   },
 })
