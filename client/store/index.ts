@@ -84,4 +84,9 @@ export const actions: ActionTree<RootState, RootState> = {
       this.$router.push('/')
     }
   },
+  LogOut({ commit }) {
+    commit('SET_TOKEN', '')
+    commit('SET_USERNAME', '')
+    this.$router.push('/')
+  },
 }
