@@ -63,12 +63,15 @@ const AuthAnchor = styled.a`
   margin-right: 10px;
 `
 
-const LogOutAnchor = styled.a`
+const LogOutAnchor = styled.button`
+  border: none;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 16px;
   text-decoration: none;
   text-align: center;
   color: #fffffe;
   display: block;
-  padding: 10px;
+  padding: 16px;
   font-weight: 600;
   background: linear-gradient(to bottom, #323232 0%, #3f3f3f 40%, #1c1c1c 150%),
     linear-gradient(

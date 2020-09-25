@@ -4,21 +4,27 @@
       <Nav>
         <LeftUl>
           <Li>
-            <Logo href="/">Windi</Logo>
+            <Logo><nuxt-link class="links" to="/">Windi</nuxt-link> </Logo>
           </Li>
         </LeftUl>
         <RightUl>
           <Li>
-            <Anchor href="/">Home</Anchor>
+            <Anchor><nuxt-link class="links" to="/">Home</nuxt-link> </Anchor>
           </Li>
           <Li>
-            <Anchor href="/">Create</Anchor>
+            <Anchor
+              ><nuxt-link class="links" to="/create">Create</nuxt-link>
+            </Anchor>
           </Li>
           <Li>
-            <AuthAnchor href="/">Login</AuthAnchor>
+            <AuthAnchor
+              ><nuxt-link class="links" to="/login">Login</nuxt-link>
+            </AuthAnchor>
           </Li>
           <Li>
-            <AuthAnchor href="/">Register</AuthAnchor>
+            <AuthAnchor
+              ><nuxt-link class="links" to="/register">register</nuxt-link>
+            </AuthAnchor>
           </Li>
           <Li>
             <LogOutAnchor href="/">Logout</LogOutAnchor>

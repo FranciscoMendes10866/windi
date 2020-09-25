@@ -14,3 +14,10 @@ export default Vue.extend({
   },
 })
 </script>
+
+<style>
+.links {
+  text-decoration: none;
+  color: white;
+}
+</style>
