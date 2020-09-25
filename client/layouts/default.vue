@@ -19,5 +19,9 @@ export default Vue.extend({
 .links {
   text-decoration: none;
   color: white;
+  background: transparent;
+}
+* {
+  background: #16161a;
 }
 </style>

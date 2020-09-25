@@ -5,7 +5,7 @@
       <Container>
         <Row>
           <Column>
-            <Header4>My Gifs</Header4>
+            <Header4>Welcome {{ userName }}.</Header4>
             <Paragraph
               >Here you will find all the gifs that were published by you on
               platform.</Paragraph
@@ -25,6 +25,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { mapGetters } from 'vuex'
 import {
   Container,
   Header4,
@@ -56,6 +57,11 @@ export default Vue.extend({
   data: () => ({
     Gifs: [],
   }),
+  computed: {
+    ...mapGetters({
+      userName: 'userName',
+    }),
+  },
   mounted() {
     this.Fetch()
   },

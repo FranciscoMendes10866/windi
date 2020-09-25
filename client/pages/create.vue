@@ -56,7 +56,7 @@ export default Vue.extend({
         // eslint-disable-next-line no-console
         console.log('Add Gif Error.')
       } else {
-        this.$router.push('/')
+        this.localURL = ''
       }
     },
   },

@@ -15,9 +15,7 @@
         <CardRow>
           <Card v-for="Gif in Gifs" :key="Gif.id">
             <Img :src="Gif.url" alt />
-            <CopyButton @click="Selected(Gif)"
-              >Copy to Clipboard</CopyButton
-            >
+            <CopyButton @click="Selected(Gif)">Copy URL</CopyButton>
           </Card>
         </CardRow>
       </Container>
