@@ -121,8 +121,6 @@ const Card = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to right, #434343 0%, black 100%);
-    opacity: 0.6;
   }
 `
 
@@ -131,7 +129,6 @@ const Img = styled.img`
   max-height: 100%;
   height: 100%;
   width: 100%;
-  filter: grayscale(1);
 `
 
 export {
