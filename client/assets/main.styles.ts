@@ -98,9 +98,10 @@ const Button = styled.button`
   background: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);
   padding-left: 50px;
   padding-right: 50px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 23px;
+  padding-bottom: 23px;
   color: #fffffe;
+  font-family: 'Anonymous Pro', monospace;
   border: none;
   outline: none;
   font-size: 24px;

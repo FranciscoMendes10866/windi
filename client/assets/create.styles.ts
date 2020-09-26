@@ -22,8 +22,9 @@ const Button = styled.button`
   background: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
   padding-left: 50px;
   padding-right: 50px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  font-family: 'Anonymous Pro', monospace;
+  padding-top: 23px;
+  padding-bottom: 23px;
   color: #fffffe;
   border: none;
   outline: none;

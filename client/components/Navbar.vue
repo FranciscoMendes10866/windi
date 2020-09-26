@@ -23,7 +23,7 @@
           </Li>
           <Li v-if="!hasToken">
             <AuthAnchor
-              ><nuxt-link class="links" to="/register">register</nuxt-link>
+              ><nuxt-link class="links" to="/register">Register</nuxt-link>
             </AuthAnchor>
           </Li>
           <Li v-if="hasToken">
